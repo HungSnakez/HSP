@@ -187,27 +187,19 @@ body{
 
 .rotate {
     animation: rotate 10s linear infinite; 
-    width: 100px; 
-    height: 100px;
-    background: url('/img/flower_white.png') no-repeat center center; 
-    background-size: cover; 
 }
 
 .rotate-flower {
     animation: rotate 10s linear infinite; 
     width: 100px; 
     height: 100px;
-    background: url('/img/sun.jpg') no-repeat center center; /* Đặt hình ảnh hoa làm nền */
-    background-size: cover; /* Đảm bảo hình ảnh hoa nền bao phủ hoàn toàn */
+    background: url('/img/sun.jpg') no-repeat center center; 
+    background-size: cover; 
 }
 .flower {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    width: 100px; 
+    height: 100px;
+    background-size: cover; 
     transform: translate(-50%, -50%);
   }
 
@@ -218,7 +210,6 @@ body{
     background-color: #fff;
     position: absolute;
   }
-/* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
 
