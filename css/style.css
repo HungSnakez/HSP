@@ -5,32 +5,65 @@
 /* Đối với thiết bị di động */
 @media screen and (max-width: 574px) {
     .greetings {
-        font-size: 3rem;
-        font-weight: 500;
-        text-align: center;
+        font-size: 24px !important;
+        width: 100%;
+        display: flex !important;
+        justify-content: center;
+    }
+    #letter{
+        letter-spacing: 0.7rem !important;
+    }
+    .greetings-name {
+        font-size: 24px !important;
     }
     .description {
         font-size: 1rem;
     }
-    .button a {
-        font-size: .5rem;
+    .button {
+        position: relative;
     }
+    .container-home {
+        padding-top: 40px !important;
+      }
+}
+
+html{
+    min-height: 100%;
+    overflow: hidden;
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: black;
     width: 100%;
-    height: auto;
+    height: 100vh;
     color: rgba(255, 255, 255, 0.75);
     font-family: 'Anonymous Pro', monospace;
-    background-color: rgb(25, 25, 25);
+    background-color: rgb(206 184 243) !important;
     
 }
+
+.header {
+    width: 100%;
+    padding: 40px 0;
+}
+
+.container-home {
+    padding-top: 60px;
+    display: flex;
+    width: 100%;
+    height: 100vh ;
+    flex-direction: column;
+    align-items: center;
+}
+
 .greetings{
+    margin: 1rem 0;
+    display: block;
+    font-size: 3rem;
+    font-weight: 500;
+    text-align: center;
+}
+.greetings-name {
     margin: 1rem 0;
     display: block;
     font-size: 3rem;
@@ -74,6 +107,56 @@ body{
 .greetings > span:nth-child(9){
     animation-delay: 1.6s;
 }
+.greetings > span:nth-child(10){
+    animation-delay: 1.8s;
+}
+.greetings > span:nth-child(11){
+    animation-delay: 1.8s;
+}
+
+.greetings-name > span{
+    animation: glow 3s ease-in-out infinite;
+}
+@keyframes glow{
+    0%, 100%{
+        color: #fff;
+        text-shadow: 0 0 12px #39c6d6, 0 0 50px #39c6d6, 0 0 100px #39c6d6;
+    }
+    10%, 90%{
+        color: #484747;
+        text-shadow: none;
+    }
+}
+.greetings-name > span:nth-child(2){
+    animation-delay: .2s ;
+}
+.greetings-name > span:nth-child(3){
+    animation-delay: .4s ;
+}
+.greetings-name > span:nth-child(4){
+    animation-delay: .6s;
+}
+.greetings-name > span:nth-child(5){
+    animation-delay: .8s;
+}
+.greetings-name > span:nth-child(6){
+    animation-delay: 1s ;
+}
+.greetings-name > span:nth-child(7){
+    animation-delay: 1.2s ;
+}
+.greetings-name > span:nth-child(8){
+    animation-delay: 1.4s;
+}
+.greetings-name > span:nth-child(9){
+    animation-delay: 1.6s;
+}
+.greetings-name > span:nth-child(10){
+    animation-delay: 1.8s;
+}
+.greetings-name > span:nth-child(11){
+    animation-delay: 2s;
+}
 
 .description{
     font-size: 1.5rem;
@@ -81,29 +164,16 @@ body{
 }
 
 .button a{
-    text-decoration: none;
-    font-size: 1rem;
-    color: #111;
+    display: flex;
 }
 
 
 #letter{
     letter-spacing: -0.2em;
 }
-@media screen and (max-width:574px){
-    .greetings{
-        display: block;
-        font-size: 3rem;
-        font-weight: 500;
-        text-align: center;
-    }
-    .description{
-        font-size: 1rem;
-    }
-    
-    .button a{
-        font-size: .5rem;
-    }
+.letter-name {
+    letter-spacing: 0.5rem !important;
+    font-family: system-ui !important;
 }
 
 @keyframes rotate {
@@ -116,10 +186,18 @@ body{
 }
 
 .rotate {
-    animation: rotate 10s linear infinite; /* Xoay trong 10 giây vô hạn lần */
-    width: 100px; /* Kích thước của hình hoa */
+    animation: rotate 10s linear infinite; 
+    width: 100px; 
     height: 100px;
-    background: url('/img/flower_white.png') no-repeat center center; /* Đặt hình ảnh hoa làm nền */
+    background: url('/img/flower_white.png') no-repeat center center; 
+    background-size: cover; 
+}
+
+.rotate-flower {
+    animation: rotate 10s linear infinite; 
+    width: 100px; 
+    height: 100px;
+    background: url('/img/sun.jpg') no-repeat center center; /* Đặt hình ảnh hoa làm nền */
     background-size: cover; /* Đảm bảo hình ảnh hoa nền bao phủ hoàn toàn */
 }
 .flower {
@@ -143,18 +221,9 @@ body{
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
 
-/* Global */
-html{
-  min-height: 100%;
-  overflow: hidden;
-}
-body{
-  height: calc(100vh - 8em);
 
-  color: rgba(255,255,255,.75);
-  font-family: 'Anonymous Pro', monospace;  
-  background-color: rgb(25,25,25);  
-}
+
+
 .line-1{
     position: relative;
     top: 50%;  
@@ -185,13 +254,11 @@ body{
 }
 .csstext{
     display: flex;
-    width: 95%;
     font-family: 'Anonymous Pro', monospace;
-    font-size: 12pt;
+    font-size: 24px;
     text-align: center;
     white-space: normal;
     justify-content: center;
-    padding: 28px 45%;
     letter-spacing: 1px;
     color: #fff;
     font-weight: normal;
@@ -199,13 +266,12 @@ body{
 }
 @media screen and (max-width: 574px) {
     .csstext{
-        padding: 2em; /* Thay đổi độ dày lề cho thiết bị di động */
-    font-size: 12pt; /* Điều chỉnh kích thước phông chữ cho thiết bị di động */
-    text-align: center; /* Căn giữa văn bản cho thiết bị di động */
-    width: 100%; /* Sử dụng toàn bộ chiều rộng cho thiết bị di động */
-    letter-spacing: 0.5px; /* Điều chỉnh khoảng cách giữa các chữ cái */
+        padding: 2px;
+        font-size: 20px; 
+        width: 100%; 
     }
 }
+
 #pp_letter{
     color:#fff;
     letter-spacing: 1px;
@@ -228,4 +294,18 @@ body{
       display: none; /* Ẩn thẻ <br> trên các thiết bị khác */
     }
   }
-  
+
+
+.img-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.image-logo {
+    height: 100px;
+}
+
+.button {
+    position: absolute;
+    bottom: 0;
+}
